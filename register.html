@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DoBu Martial Arts - martial arts, fitness and self-defence training">
+  <title>Register | DoBu Martial Arts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Do<span>Bu</span></a>
+      <button class="menu-btn" aria-label="Open navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="classes.html">Classes</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="membership.html">Membership</a>
+        <a href="instructors.html">Instructors</a>
+        <a href="community.html">Community</a>
+        <a href="register.html">Register</a><a href="login.html">Login</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+  <section class="page-header">
+    <div class="container">
+      <h1>Create Your Account</h1>
+      <p>Register for a DoBu Martial Arts membership.</p>
+    </div>
+  </section>
+  <section class="section section-light">
+    <div class="container">
+      <div class="form-card">
+        <div id="formAlert" class="alert"></div>
+        <form id="registerForm" novalidate>
+          <div class="form-group"><label for="name">Full Name</label><input id="name" name="name" type="text" required
+              minlength="2"></div>
+          <div class="form-group"><label for="email">Email Address</label><input id="email" name="email" type="email"
+              required></div>
+          <div class="form-group"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel"
+              required></div>
+          <div class="form-group"><label for="membership">Membership Plan</label><select id="membership" required>
+              <option value="">Select a plan</option>
+              <option>Basic - £25/month</option>
+              <option>Intermediate - £35/month</option>
+              <option>Advanced - £45/month</option>
+              <option>Elite - £60/month</option>
+              <option>Junior - £25</option>
+            </select></div>
+          <div class="form-group"><label for="password">Password</label><input id="password" type="password" required
+              minlength="8"></div>
+          <div class="form-group"><label for="confirmPassword">Confirm Password</label><input id="confirmPassword"
+              type="password" required minlength="8"></div>
+          <button class="btn btn-primary" type="submit">Create Account</button>
+        </form>
+        <p class="auth-note">Already Register? <a class="text-link" href="login.html">login</a></p>
+      </div>
+    </div>
+  </section>
+
+  </main>
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>DoBu Martial Arts</h3>
+        <p>Martial arts, fitness and self-defence training for beginners, families and experienced students.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="classes.html">Classes</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="membership.html">Membership</a>
+        <a href="register.html">Register</a><a href="login.html">Login</a>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="year"></span> DoBu Martial Arts. Academic project website.</div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

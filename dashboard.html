@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | DoBu Martial Arts</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+  <nav class="navbar dashboard-navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Do<span>Bu</span></a><button class="menu-btn"
+        aria-label="Open navigation">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="membership.html">Membership</a>
+        <a href="instructors.html">Instructors</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+        <a href="#" id="logoutLink">Logout</a>
+      </div>
+    </div>
+  </nav>
+  <section class="dashboard-shell">
+    <div class="member-banner">
+      <span class="badge">PRIVATE MEMBER AREA</span>
+      <h1>Welcome back, <span id="dashboardName">Member</span>!</h1>
+      <p>Manage your DoBu membership, book classes and view your booking history.</p>
+    </div>
+    <div class="container">
+      <div class="dashboard-grid">
+        <div class="dashboard-card welcome-card"><span class="badge">MEMBER ACCOUNT</span>
+          <h2>Hello, <span id="welcomeName">Member</span>!</h2>
+          <p><strong>Email:</strong> <span id="dashboardEmail"></span></p>
+          <p><strong>Membership:</strong> <span id="dashboardMembership"></span></p><a class="btn btn-primary"
+            href="#booking">Book a Class</a>
+        </div>
+        <div class="dashboard-card stats-card">
+          <h3>Booking Summary</h3>
+          <div class="stat-number" id="bookingCount">0</div>
+          <p>Total bookings</p>
+        </div>
+      </div>
+      <div id="booking" class="dashboard-card booking-card">
+        <div class="section-title left">
+          <h2>Book a Class</h2>
+          <p>Select a class and preferred date and time.</p>
+        </div>
+        <div id="bookingAlert" class="alert"></div>
+        <form id="bookingForm" class="grid grid-2" novalidate>
+          <div class="form-group"><label for="bookingClass">Class</label><select id="bookingClass" required>
+              <option value="">Select a class</option>
+              <option>Judo</option>
+              <option>Karate</option>
+              <option>Jiu-jitsu</option>
+              <option>Muay Thai</option>
+              <option>Fitness Training</option>
+              <option>Private Tuition</option>
+              <option>Open Mat / Personal Practice</option>
+            </select></div>
+          <div class="form-group"><label for="bookingDate">Date</label><input id="bookingDate" type="date" required>
+          </div>
+          <div class="form-group"><label for="bookingTime">Time</label><select id="bookingTime" required>
+              <option value="">Select a time</option>
+              <option>06:00–07:30</option>
+              <option>08:00–10:00</option>
+              <option>10:30–12:00</option>
+              <option>13:00–14:30</option>
+              <option>15:00–17:00</option>
+              <option>17:30–19:00</option>
+            </select></div>
+          <div class="form-group"><label for="bookingNotes">Notes (optional)</label><input id="bookingNotes" type="text"
+              maxlength="120" placeholder="Any special request"></div>
+          <div><button class="btn btn-primary" type="submit">Confirm Booking</button></div>
+        </form>
+      </div>
+      <div class="dashboard-card history-card">
+        <div class="section-title left">
+          <h2>Booking History</h2>
+          <p>Your previous and upcoming bookings are shown below.</p>
+        </div>
+        <div id="bookingHistory"></div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-bottom">© <span id="year"></span> DoBu Martial Arts. Academic project website.</div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
